@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EmployeeDBFirst.Models.City>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CityNameArabic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityNameEnglish)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityNameArabic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityNameEnglish)
+            </td>
+            <td class="btn-group">
+                <a class="btn btn-warning m-1" asp-action="Edit" asp-route-id="@item.CityId">Edit</a>
+                <a class="btn btn-primary m-1" asp-action="Details" asp-route-id="@item.CityId">Details</a>
+                <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id="@item.CityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<EmployeeDBFirst.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New Employee</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeNameArabic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeNameEnglish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HiringDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeNameArabic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeNameEnglish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HiringDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City.CityNameEnglish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+            </td>
+            <td class="btn-group">
+                    <a class="btn btn-warning m-1" asp-action="Edit" asp-route-id="@item.EmployeeId">Edit</a>
+                    <a class="btn btn-primary m-1" asp-action="Details" asp-route-id="@item.EmployeeId">Details</a>
+                    <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id="@item.EmployeeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

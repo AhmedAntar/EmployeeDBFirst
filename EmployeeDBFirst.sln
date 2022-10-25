@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeDBFirst", "EmployeeDBFirst\EmployeeDBFirst.csproj", "{2590CB8A-5EE9-4ACF-8EF2-6379280A01FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2590CB8A-5EE9-4ACF-8EF2-6379280A01FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2590CB8A-5EE9-4ACF-8EF2-6379280A01FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2590CB8A-5EE9-4ACF-8EF2-6379280A01FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2590CB8A-5EE9-4ACF-8EF2-6379280A01FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76B6C125-73D2-4C4D-BD1C-80DD23A8ABD8}
+	EndGlobalSection
+EndGlobal
